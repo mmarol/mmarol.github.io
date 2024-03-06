@@ -12,28 +12,21 @@ Base styles
 
 }
 
-body {
-	background-color: #e3f4ec;
-	color: rgb(129, 78, 19);
-	max-width: 800px;
-	margin: 0 0 0 50%;
-	position: relative;
-	padding: 4rem;
-}
-
 /* grid layout example */
-/* body {
+body {
 	background-color: #e3f4ec;
 	color: rgb(129, 78, 19);
 	max-width: 100%;
 	position: relative;
-	margin: 0;
-	padding: 4rem;
+	margin: 2rem;
+
 	display: grid;
 	grid-template-columns: 400px 1fr;
+
 	gap: 2rem;
+
 	align-items: start;
-} */
+}
 
 p {
 	/* font-size: 20px; */
@@ -72,8 +65,8 @@ Navigation styles
 .navigation {
 	border: 1px solid darkgoldenrod;
 	/* position: fixed; */
-	position: relative;
-	/* top: 2rem; */
+	position: sticky;
+	top: 2rem;
 	/* left: 2rem; */
 	padding: 1rem;
 	margin: 1rem;
@@ -122,21 +115,22 @@ Navigation styles
 }
 
 /* navigation target example */
-/* :target:before {
+:target:before {
 	content: "♦";
 	display: inline-block;
+
 	animation: current-header 1s ease infinite reverse;
 }
 
 @keyframes current-header {
 	0% {
-		transform: rotate(0deg);
+		transform: rotate(0deg) scale(1);
 	}
 
 	100% {
-		transform: rotate(360deg);
+		transform: rotate(360deg) scale(2);
 	}
-} */
+}
 
 /* .navigation__list {
 	list-style: none;
@@ -195,18 +189,23 @@ Related articles styles
 /* border-box example */
 .related {
 	background-color: rgb(224, 130, 255);
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .related__section-title {
+	flex-basis: 100%;
 	/* font-family: 'Courier New', Courier, monospace; */
 }
 
 .related__essay {
 	background-color: rgb(136, 225, 255);
+	border: 1px solid black;
 	margin-bottom: 1rem;
 	width: 100%;
-	/* padding: 1rem; */
-	/* box-sizing: border-box; */
+	padding: 1rem;
+	box-sizing: border-box;
+	flex-basis: calc(100% / 3);
 	/* margin: 1rem; */
 }
 
@@ -301,3 +300,7 @@ Bio styles
 	padding: 0 0.5rem;
 	transform: rotate(5deg);
 } */
+
+@media screen (min-width: 320px) and (max-width: 768px) {
+	
+}
