@@ -4,11 +4,11 @@ Fonts
 ---------------------------------
 */
 /* self-hosted font example */
-@font-face {
+/* @font-face {
 	font-family: "Absans";
 	src: url("../fonts/Absans-Regular.woff2") format("woff2");
 	font-weight: normal;
-}
+} */
 
 /* variable font example */
 /* @font-face {
