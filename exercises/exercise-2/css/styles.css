@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(255, 225, 205);
+    margin: auto;
+}
+
+main {
+    max-width: 100%;
+    margin-left: 320px;
+}
+
+nav {
+    padding: 1rem;
+    border-right: 1px dashed darkmagenta;
+    border-bottom: 1px dashed darkmagenta;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5rem;
+
+    width: 300px;
+    position: fixed;
+    margin: 0;
+}
+
+.navigation__link {
+    color: darkmagenta;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+
+    border: 2px solid red;
+
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+}
+
+p:hover {
+    color: red;
+}
+
+h2 {
+    color: rgb(3, 109, 135);
+}
+
+
+
+.highlighted {
+    background-color: cadetblue;
+    font-weight: bold;
+}
+
+h1 {}

@@ -1,0 +1,103 @@
+/* 
+-----------------------------------
+Base styles
+-----------------------------------
+*/
+
+body {
+  background-color: #faf4e6;
+  margin: 1rem;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 100%;
+  margin-left: 20%;
+  margin-left: 21rem;
+  position: relative;
+}
+
+h3 + p {
+  text-indent: 2rem;
+}
+
+h4 + p {
+  text-indent: 2rem;
+}
+
+p {
+  font-size: 20px;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ol ol {
+  margin-left: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  padding: 2rem;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+/* 
+-----------------------------------
+Navigation styles
+-----------------------------------
+*/
+
+.navigation {
+  padding: 1rem;
+  /* border-right: 1px dashed darkolivegreen; */
+  /* border-bottom: 1px dashed darkolivegreen; */
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.2rem;
+  width: 20rem;
+  position: fixed;
+  margin: 0;
+}
+
+.navigation__secondary {
+  margin-left: 1rem;
+}
+
+.navigation li {
+  border-bottom: 1px solid darkolivegreen;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* .navigation__primary > li:last-child {
+  border-bottom: none;
+} */
+
+.navigation a {
+  color: darkolivegreen;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: darkorchid;
+}
+
+/* 
+-----------------------------------
+Main content styles
+-----------------------------------
+*/
+
+.highlighted-text {
+  color: rgb(150, 50, 127);
+  font-family: Georgia, Times, serif;
+  background-color: whitesmoke;
+  padding: 1rem;
+}
