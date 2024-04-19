@@ -1,0 +1,265 @@
+/* 
+-----------------------------------
+Colors
+-----------------------------------
+*/
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --primary-color: red;
+    --secondary-color: green;
+}
+
+
+/* 
+-----------------------------------
+Fonts
+-----------------------------------
+*/
+
+@font-face {
+    font-family: 'Absans';
+    src: url('../fonts/Absans-Regular.woff2');
+}
+
+
+@font-face {
+    font-family: 'SpratVF';
+    src: url('../fonts/SpratVF.woff2');
+}
+
+
+/* 
+-----------------------------------
+Animations
+-----------------------------------
+*/
+
+@keyframes tracking {
+    0% {
+        letter-spacing: 0;
+        color: red;
+    }
+
+    50% {
+        color: green;
+    }
+
+    100% {
+        letter-spacing: 10px;
+        color: blue;
+    }
+}
+
+/* 
+-----------------------------------
+Base styles
+-----------------------------------
+*/
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: auto;
+    font-family: 'Absans', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+body.light {
+    background: lightgoldenrodyellow;
+    color: darkblue;
+}
+
+body.dark {
+    background: darkblue;
+    color: lightgoldenrodyellow;
+}
+
+h1 {
+    font-family: "Bungee Spice", sans-serif;
+}
+
+h2 {
+    font-family: 'SpratVF';
+    font-stretch: 100%;
+    font-weight: 100;
+    transition: all 0.3s ease;
+    color: var(--secondary-color);
+}
+
+h2:hover {
+    font-weight: 200;
+}
+
+main {
+    max-width: 100%;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ol li {}
+
+ol>li {}
+
+h3~p {}
+
+h3+p {}
+
+h2 {
+    color: rgb(3, 109, 135);
+}
+
+h2+p {
+    text-indent: 2rem;
+}
+
+h3+p {
+    text-indent: 2rem;
+}
+
+h3:target {
+    animation: tracking 2s ease infinite alternate;
+}
+
+h4:target {
+    animation: tracking 2s ease infinite alternate;
+}
+
+p {
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+}
+
+p:hover {
+    color: red;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+
+    border: 2px solid var(--secondary-color);
+
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+
+/* 
+-----------------------------------
+Navigation styles
+-----------------------------------
+*/
+
+.navigation a {
+    color: darkmagenta;
+}
+
+.navigation a:hover {
+    color: red;
+}
+
+.navigation {
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.2rem;
+    /* width: 18rem; */
+    margin: 0;
+
+    display: none;
+}
+
+.navigation ol {
+    list-style: none;
+}
+
+.navigation__secondary {
+    padding-left: 1rem;
+}
+
+.navigation li {
+    border-bottom: 1px solid darkolivegreen;
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.navigation__primary>li:last-child {
+    border-bottom: none;
+}
+
+.navigation a {
+    color: darkolivegreen;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: darkorchid;
+}
+
+
+/* 
+-----------------------------------
+Main content styles
+-----------------------------------
+*/
+
+.highlighted {
+    background-color: cadetblue;
+    font-weight: bold;
+}
+
+h1 {}
+
+
+
+/* 
+-----------------------------------
+Media queries
+-----------------------------------
+*/
+
+
+/* Medium screens */
+@media screen and (min-width: 500px) {
+    
+    .navigation {
+        display: block;
+        order: 2;
+    }
+
+    main {
+        order: 1;
+    }
+
+}
+
+/* Large screens */
+@media screen and (min-width: 1000px) {
+    
+    .navigation {
+        order: 1;
+        flex-basis: 300px;
+
+        position: sticky;
+        top: 10px;
+    }
+
+    main {
+        order: 2;
+        flex-basis: calc(100% - 300px - 20px);
+    }
+
+}

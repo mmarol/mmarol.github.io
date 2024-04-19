@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercise 1</title>
+  <title>Exercise 3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,9 +17,9 @@
 
   <!-- Navigation -->
   <nav class="navigation">
-    <button id="light-mode" class="color-scheme">🌝</button>
-    <button id="dark-mode" class="color-scheme">🌚</button>
     <ol class="navigation__primary">
+      <button id="light-mode" class="color-scheme">🌝</button>
+      <button id="dark-mode" class="color-scheme">🌚</button>
       <li><a href="#what-is-a-website">What is a website?</a></li>
       <li><a href="#why-have-a-website">Why have awebsite?</a></li>
       <li><a href="#what-can-a-website-do">What can a website be?</a> </li>
@@ -369,7 +369,30 @@
     </aside>
   </main>
 
-  <script src="scripts/color-mode.js"></script>
+  <script>
+    // find an element with the ID dark-mode
+    document.querySelector("#dark-mode")
+      // check if the element gets clicked
+      .addEventListener("click", function () {
+        // find the <body> and add the class "dark"
+        document.querySelector("body").classList.add("dark");
+        // find the <body> and remove the class "light"
+        document.querySelector("body").classList.remove("light");
+      }
+      );
+
+    // find an element with the ID light-mode
+    document.querySelector("#light-mode")
+      // check if the element is clicked
+      .addEventListener("click", function () {
+        // find the <body> and add the class "light"
+        document.querySelector("body").classList.add("light");
+        // find the <body> and remove the class "dark"
+        document.querySelector("body").classList.remove("dark");
+      }
+      );
+  </script>
+
 </body>
 
 </html>

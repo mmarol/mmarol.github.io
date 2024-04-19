@@ -1,0 +1,523 @@
+/* 
+---------------------------------
+Fonts
+---------------------------------
+*/
+/* self-hosted font example */
+@font-face {
+	font-family: "Absans";
+	src: url("../fonts/Absans-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+/* variable font example */
+/* @font-face {
+	font-family: "SpratVF";
+	src: url("../fonts/SpratVF.woff2") format("woff2-variations");
+} */
+
+
+/* 
+---------------------------------
+Colors
+---------------------------------
+*/
+:root {
+	--bg-color: white;
+	--text-color: black;
+	--primary-color: darkgreen;
+	--secondary-color: khaki;
+}
+
+
+/* 
+---------------------------------
+Base styles
+---------------------------------
+*/
+
+h1 {
+	font-size: 3rem;
+	font-variant-ligatures: none;
+	font-feature-settings: "ss04";
+}
+
+/* self-hosted font example */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Absans', Verdana, sans-serif;
+	/* opentype example */
+	/* font-feature-settings: "liga" 0, "clig" 0, "dlig"; */
+	/* font-variant-ligatures: normal;
+	font-variant-ligatures: none;
+	font-variant-ligatures: common-ligatures;
+	font-variant-ligatures: no-common-ligatures;
+	font-variant-ligatures: discretionary-ligatures;
+	font-variant-ligatures: no-discretionary-ligatures;
+	font-variant-ligatures: historical-ligatures;
+	font-variant-ligatures: no-historical-ligatures;
+	font-variant-ligatures: contextual;
+	font-variant-ligatures: no-contextual; */
+
+	/* Variable font example */
+	/* font-family: "SpratVF";
+	font-stretch: 100%;
+	font-weight: 20;
+	transition: all 0.2s ease;
+
+	&:hover {
+		font-weight: 200;
+	} */
+}
+
+/* body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	max-width: 100%;
+	position: relative;
+	margin: 2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+
+	display: grid;
+	grid-template-columns: 400px 1fr;
+
+	gap: 2rem;
+
+	align-items: start;
+	color:
+
+} */
+
+/* responsive layout exercise */
+body {
+	background-color: #e3f4ec;
+	color: rgb(129, 78, 19);
+	max-width: 100%;
+	position: relative;
+	margin: 0.5rem;
+	font-family: "Crimson Text", serif;
+	font-weight: 300;
+	font-style: normal;
+
+	display: block;
+
+	gap: 2rem;
+
+	align-items: start;
+}
+
+p {
+	/* font-size: 20px; */
+	/* font-family: sans-serif; */
+	color: rgb(25, 105, 61);
+}
+
+a:hover {
+	color: blueviolet;
+}
+
+img {
+	width: 100%;
+	display: inline-block;
+	/* border: 1px solid black; */
+	/* padding: 1rem; */
+	/* box-sizing: border-box; */
+}
+
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ol ol {
+	padding-left: 1rem;
+}
+
+
+/* 
+---------------------------------
+Navigation styles
+---------------------------------
+*/
+
+.navigation {
+	border: 1px solid darkgoldenrod;
+	position: relative;
+	top: 2rem;
+	padding: 1rem;
+	margin: 1rem;
+	display: none;
+}
+
+/* responsive layout exercise */
+/* .navigation {
+	border: 1px solid darkgoldenrod;
+	position: relative;
+	padding: 0.5rem;
+	margin: 0;
+	display: none;
+
+	@media screen and (min-width: 40rem) {
+		display: block;
+		margin-top: 1rem;
+		font-size: 0.9rem;
+	}
+
+	@media screen and (min-width: 60rem) {
+		font-size: 1rem;
+		position: sticky;
+		top: 1rem;
+	}
+} */
+
+/* grid layout example */
+/* .navigation {
+	border: 1px solid darkgoldenrod;
+	position: sticky;
+	top: 2rem;
+	padding: 1rem;
+} */
+
+.navigation ol {
+	list-style: none;
+}
+
+.navigation li {
+	border-bottom: 1px solid darkgoldenrod;
+	/* border-width, border-style, border-color */
+}
+
+/* .navigation > ol > li:last-child {
+	border-bottom: none;
+} */
+
+.navigation__primary>li:last-child {
+	border-bottom: none;
+}
+
+.navigation a {
+	display: block;
+	text-decoration: none;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	color: darkgoldenrod;
+
+	transition: color 1s ease;
+
+	/* &:hover {
+		color: black;
+	} */
+}
+
+.navigation a:hover {
+	color: black;
+}
+
+/* navigation target example */
+:target:before {
+	content: "♦";
+	display: inline-block;
+
+	animation: current-header 1s ease infinite reverse;
+}
+
+@keyframes current-header {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+
+	100% {
+		transform: rotate(360deg) scale(2);
+	}
+}
+
+/* .navigation__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navigation__item {
+
+}
+
+.navigation__link {
+	display: block;
+	text-decoration: none;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	color: darkgoldenrod;
+} */
+
+
+/* 
+---------------------------------
+Essay styles
+---------------------------------
+*/
+
+.intro-text {
+	background-color: lightgreen;
+	font-family: serif;
+	color: green;
+}
+
+.callout {
+	font-size: 30px;
+	font-style: italic;
+	color: cornflowerblue;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid cornflowerblue;
+	margin: 0;
+	padding: 0;
+	/* box model example */
+	/* width: 100%; */
+	padding: 1rem;
+	margin: 2rem;
+	box-sizing: content-box;
+	/* width: calc(100% - 4rem); */
+}
+
+
+/* 
+---------------------------------
+Related articles styles
+---------------------------------
+*/
+
+/* border-box example */
+.related {
+	background-color: rgb(224, 130, 255);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.related__section-title {
+	flex-basis: 100%;
+	/* font-family: 'Courier New', Courier, monospace; */
+}
+
+.related__essay {
+	background-color: rgb(136, 225, 255);
+	border: 1px solid black;
+	margin-bottom: 1rem;
+	width: 100%;
+	padding: 1rem;
+	box-sizing: border-box;
+	flex-basis: calc(100% / 3);
+	/* margin: 1rem; */
+}
+
+.related__title {
+	/* font-family: sans-serif; */
+}
+
+.related__author {
+	/* font-family: sans-serif; */
+}
+
+/* flexbox example */
+/* .related {
+	background-color: rgb(254, 255, 193);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.related__section-title {
+	flex-basis: 100%;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.related__essay {
+	border: 1px solid black;
+	background-color: rgb(175, 214, 227);
+	padding: 1rem;
+	flex-basis: calc(100% / 3);
+	box-sizing: border-box;
+}
+
+.related__title {
+	font-family: sans-serif;
+}
+
+.related__author {
+	font-family: sans-serif;
+} */
+
+/* nth-child example */
+/* .related__essay:nth-child(odd) {
+	background-color: rgb(175, 214, 227);
+}
+
+.related__essay:nth-child(odd) {
+	background-color: rgb(175, 227, 210);
+} */
+
+
+
+/* 
+---------------------------------
+Bio styles
+---------------------------------
+*/
+
+/* .bio {
+	background-color: rgb(254, 255, 193);
+	display: inline-block;
+	width: 100%;
+	border: 1px solid black;
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+.bio__profile {
+	background-color: rgb(255, 233, 193);
+	display: inline-block;
+	width: 20%;
+	margin: 0;
+	padding: 0;
+	margin-right: 5%;
+}
+
+.bio__headshot {}
+
+.bio__title {}
+
+.bio__description {
+	background-color: rgb(255, 193, 193);
+	display: inline-block;
+	width: 70%;
+	margin: 0;
+	padding: 0;
+}
+
+.bio__text {}
+
+.bio__link {
+	display: inline-block;
+	background-color: aquamarine;
+	padding: 0 0.5rem;
+	transform: rotate(5deg);
+} */
+
+
+/* media query organization options */
+/* @media screen and (min-width: 800px) {
+	body {
+		background-color: #8fd0b2;
+	}
+	
+	h1 {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	body {
+		background-color: #b9d08f;
+	}
+	
+	h1 {
+		font-size: 5rem;
+	}
+}
+
+body {
+	background-color: #e3f4ec;
+
+	@media screen and (min-width: 800px) {
+		background-color: #8fd0b2;
+	}
+
+	@media screen and (min-width: 800px) {
+		background-color: #b9d08f;
+	}
+}
+
+h1 {
+	font-size: 2rem;
+
+	@media screen and (min-width: 800px) {
+		font-size: 3rem;
+	}
+
+	@media screen and (min-width: 800px) {
+		font-size: 5rem;
+	}
+} */
+
+
+/* media queries example A */
+/* @media screen and (min-width: 400px) {
+	body {
+		background-color: #8fd0b2;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	body {
+		background-color: #8fbdd0;
+	}
+}
+@media screen and (min-width: 800px) {
+	body {
+		background-color: #8f98d0;
+	}
+}
+@media screen and (min-width: 1000px) {
+	body {
+		background-color: #b58fd0;
+	}
+}
+@media screen and (min-width: 1200px) {
+	body {
+		background-color: #d08fb4;
+	}
+}
+@media screen and (min-width: 1400px) {
+	body {
+		background-color: #d08f8f;
+	}
+} */
+
+/* media queries example B */
+/* @media screen and (orientation: landscape) {
+	.navigation {
+		background-color: #004022;
+	}
+}
+@media screen and (orientation: portrait) {
+	.navigation {
+		background-color: #50004f;
+	}
+} */
+
+
+
+@media screen and (min-width: 40rem) {
+	body {
+
+	}
+
+	.navigation {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 60rem) {
+	body {
+		margin: 2rem;
+		display: grid;
+		grid-template-columns: 400px 1fr;
+	}
+
+	.navigation {
+		position: sticky;
+		top: 2rem;
+	}
+}

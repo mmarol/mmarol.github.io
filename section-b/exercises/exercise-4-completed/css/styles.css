@@ -1,0 +1,248 @@
+/* 
+-----------------------------------
+Fonts
+-----------------------------------
+*/
+
+@font-face {
+    font-family: 'Absans';
+    src: url('../fonts/Absans-Regular.woff2');
+}
+
+
+@font-face {
+    font-family: 'SpratVF';
+    src: url('../fonts/SpratVF.woff2');
+}
+
+/* Bungee loaded through google fonts */
+
+
+/* 
+-----------------------------------
+Animations
+-----------------------------------
+*/
+
+@keyframes tracking {
+    0% {
+        letter-spacing: 0;
+        color: red;
+    }
+
+    50% {
+        color: green;
+    }
+
+    100% {
+        letter-spacing: 10px;
+        color: blue;
+    }
+}
+
+/* 
+-----------------------------------
+Colors
+-----------------------------------
+*/
+:root {
+    --primary-color: rgb(0, 38, 109);
+    --secondary-color: rgb(188, 211, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: rgb(188, 211, 255);
+        --secondary-color: rgb(0, 38, 109);
+    }
+}
+
+/* 
+-----------------------------------
+Base styles
+-----------------------------------
+*/
+
+body {
+    background-color: rgb(255, 236, 205);
+    margin: 1rem;
+    font-family: 'Absans', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+body.light {
+    background-color: white;
+    color: black;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-family: "Bungee Spice", sans-serif;
+}
+
+h2 {
+    font-family: 'SpratVF';
+    font-stretch: 100%;
+    font-weight: 100;
+    transition: all 0.3s ease;
+}
+
+h2:hover {
+    font-weight: 200;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ol li {}
+
+ol>li {}
+
+h3~p {}
+
+h3+p {}
+
+h2 {
+    color: rgb(3, 135, 82);
+}
+
+h2+p {
+    text-indent: 2rem;
+}
+
+h3+p {
+    text-indent: 2rem;
+}
+
+h3:target {
+    animation: tracking 2s ease infinite alternate;
+}
+
+h4:target {
+    animation: tracking 2s ease infinite alternate;
+}
+
+p {
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+
+    border: 2px solid red;
+
+    box-sizing: border-box;
+}
+
+
+/* 
+-----------------------------------
+Navigation styles
+-----------------------------------
+*/
+
+.navigation {
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.2rem;
+    /* width: 18rem; */
+
+    display: none;
+}
+
+.navigation ol {
+    list-style: none;
+}
+
+.navigation__secondary {
+    padding-left: 1rem;
+}
+
+.navigation li {
+    border-bottom: 1px solid darkolivegreen;
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.navigation__primary>li:last-child {
+    border-bottom: none;
+}
+
+.navigation a {
+    color: darkolivegreen;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: darkorchid;
+}
+
+.color-scheme {
+    font-size: 2rem;
+}
+
+
+/* 
+-----------------------------------
+Main content styles
+-----------------------------------
+*/
+
+main {
+    max-width: 100%;
+}
+
+.highlighted {
+    background-color: cadetblue;
+    font-weight: bold;
+}
+
+h1 {}
+
+
+/* 
+-----------------------------------
+Media queries
+-----------------------------------
+*/
+
+@media screen and (min-width: 30rem) {
+    .navigation {
+        display: block;
+        order: 2;
+    }
+
+    main {
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .navigation {
+        order: 1;
+        flex-basis: 18rem;
+        position: sticky;
+        top: 1rem;
+    }
+
+    main {
+        order: 2;
+        flex-basis: calc(100% - 18rem - 2rem);
+    }
+}
