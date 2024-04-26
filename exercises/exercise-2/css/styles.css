@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 28%, 84%);
+  max-width: 800px;
+  margin: auto;
+}
+
+main {
+  
+}
+
+p {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: rgb(0, 28, 171);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  padding: 20px;
+
+  border: 2px solid green;
+
+  box-sizing: border-box;
+}
+
+.intro {
+  color: rgb(108, 35, 58);
+  width: 50%;
+}
