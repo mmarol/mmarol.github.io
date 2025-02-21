@@ -1,0 +1,256 @@
+/* 
+------------------------------------
+Variables
+------------------------------------
+*/
+:root {
+  --bg-color: rgb(206, 209, 194);
+  --text-color: rgb(73, 31, 45);
+  --primary-color: rgb(0, 129, 216);
+  --seconary-color: rgb(198, 76, 129);
+}
+
+
+/* 
+------------------------------------
+Fonts
+------------------------------------
+*/
+
+@font-face {
+  font-family: 'Absans';
+  src: url('../fonts/Absans-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SpratVF';
+  src: url('../fonts/SpratVF.woff2') format('woff2-variations');
+}
+
+/* 
+------------------------------------
+Animations
+------------------------------------
+*/
+
+@keyframes random-one {
+  0% {
+    top: 100px;
+    left: 100px;
+  }
+  50% {
+    top: 200px;
+    left: 400px;
+  }
+  100% {
+    top: 700px;
+    left: 200px;
+  }
+}
+
+
+/* 
+------------------------------------
+Base styles
+------------------------------------
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+p {
+  font-size: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  padding: 20px;
+
+  border: 2px solid green;
+
+  box-sizing: border-box;
+}
+
+
+
+h1 {
+  font-family: 'SpratVF', serif;
+  font-stretch: 100%;
+  font-weight: 100;
+  transition: all 1s ease;
+}
+
+h1:hover {
+  /* font-stretch: 200%; */
+  font-weight: 600;
+}
+
+h2, h3, h4 {
+  font-family: 'Absans', Verdana, sans-serif;
+}
+
+h3 {
+  margin-top: 50px;
+  color: var(--primary-color);
+}
+
+h4 {
+  margin-top: 50px;
+  color: var(--seconary-color);
+}
+
+h3 + h4 {
+  margin-top: 0;
+}
+
+h3 + p {
+  text-indent: 20px;
+}
+
+/* 
+------------------------------------
+Navigation styles
+------------------------------------
+*/
+
+
+nav a {
+  font-family: monospace;
+  font-weight: bold;
+  background-color: antiquewhite;
+  color: blue;
+  transition: color 0.2s ease, background-color 3s ease;
+}
+
+nav a:hover {
+  color: red;
+  background-color: darkgray;
+}
+
+.navigation {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  /* width: 300px; */
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ol {
+      padding-left: 20px;
+    }
+  }
+
+  li {
+
+  }
+
+  li::marker {
+    color: red;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* a:hover {
+    color: red;
+  } */
+}
+
+/* 
+------------------------------------
+Article styles
+------------------------------------
+*/
+
+.intro {
+  color: rgb(108, 35, 58);
+  width: 50%;
+}
+
+article p {
+
+}
+
+article > p {
+  
+}
+
+h2 ~ p {
+
+}
+
+h2 + p {
+
+}
+
+
+/* 
+------------------------------------
+Media queries
+------------------------------------
+*/
+
+body {
+  font-family: "Merriweather", serif;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+.navigation {
+  display: none;
+}
+
+main {
+
+}
+
+/* medium screens */
+@media screen and (min-width: 600px) {
+  .navigation {
+    display: block;
+    order: 2;
+  }
+
+  main {
+    order: 1;
+  }
+}
+
+/* large screens */
+@media screen and (min-width: 1200px) {
+  .navigation {
+    flex-basis: 300px;
+    order: 1;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+  }
+
+  main {
+    flex-basis: calc(100% - 300px);
+    order: 2;
+  }
+}

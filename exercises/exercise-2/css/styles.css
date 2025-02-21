@@ -1,16 +1,18 @@
+/* 
+------------------------------------
+Base styles
+------------------------------------
+*/
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: hsl(0, 28%, 84%);
-  max-width: 800px;
-  margin: auto;
 }
 
-main {
-  
-}
+
 
 p {
   font-size: 20px;
@@ -31,4 +33,53 @@ img {
 .intro {
   color: rgb(108, 35, 58);
   width: 50%;
+}
+
+main {
+  margin-left: 300px;
+}
+
+/* 
+------------------------------------
+Navigation styles
+------------------------------------
+*/
+
+nav {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ol {
+      padding-left: 20px;
+    }
+  }
+
+  li {
+
+  }
+
+  li::marker {
+    color: red;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  a:hover {
+    color: red;
+  }
 }
